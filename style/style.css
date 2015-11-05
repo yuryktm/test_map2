@@ -1,0 +1,21 @@
+﻿ #map {
+    position: absolute;
+}
+
+/*.menu {*/
+    /*float: right;*/
+    /*position: relative;*/
+    /*z-index: 999;*/
+    /*margin-right: 5px;*/
+    /*margin-top: 5px;*/
+/*}*/
+
+/*div.menu img {*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+/*}*/
+
+ #s_panel_left img {
+     width: 50px;
+     height: 50px;
+ }
