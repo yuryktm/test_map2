@@ -19,3 +19,26 @@
      width: 50px;
      height: 50px;
  }
+
+ /*sign height restriction*/
+ .sign_height_restriction {
+     display:inline-block;
+     position:relative;
+ }
+ .sign_height_restriction span {
+     display:inline-block;
+     position:absolute;
+     top: 22px;
+     left: 19px; /*1 symbol*/
+     left: 14px; /*2 symbol*/
+
+     /* Оформление текста */
+     color:#000;
+     font-weight: bold;
+     font-family:Arial, Helvetica, sans-serif;
+     font-size:10px;
+
+     /* Фон */
+     /*background-color:rgba(0,0,0,.4);*/
+     padding:10px 30px;
+ }
