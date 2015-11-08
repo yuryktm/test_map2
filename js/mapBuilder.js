@@ -35,8 +35,9 @@
         return result;
     };
     
-    var _map = L.map('map').setView([59.930088, 30.325166], 12);
+    var _map = L.map('map',{ zoomControl: false }).setView([59.930088, 30.325166], 12);
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(_map);
+   // L.control.zoom();
 
     var _dataProvider = new DataProvider();
     //var points = dataProvider.getPoints();

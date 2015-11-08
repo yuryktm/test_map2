@@ -1,0 +1,79 @@
+/*right menu*/
+.right-menu {
+    position: fixed;
+    z-index: 1000;
+    width: 100px;
+    height: 200px;
+    top: 20px;
+    left: 20px;
+}
+
+/*buttons*/
+.btn-circle {
+    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    margin: 10px 0 0 0;
+}
+
+.btn-circle span  {
+    margin: 4px 0 0 0;
+}
+
+/*right panel*/
+.right-panel {
+    position: fixed;
+    z-index: 1000;
+    width: 30%;
+    height: 100%;
+    display: none;
+    background: #ffffff;
+}
+
+/*sign*/
+.sign-img{
+    width: 56px;
+    height: 56px;
+}
+
+div.panel-body img {
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* Firefox 35+ */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+/* Disable grayscale on hover */
+div.panel-body img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+#panel-showing .sign-img-box {
+    float: left;
+    padding: 20px;
+    width: 96px;
+    height: 96px;
+    margin: 10px;
+    /*border: 1px #DED3D3 solid;*/
+}
+
+#panel-configuring .sign-img-box {
+    float: left;
+    width: 96px;
+    height: 136px;
+    margin: 10px;
+    border: 1px #DED3D3 solid;
+}
+
+.sign-img-box div:first-child {
+    padding: 20px;
+}
+
+.sign-img-box div:last-child {
+    border-top: 1px #DED3D3 solid;
+    padding: 5px;
+}
+
+/*text box*/
+.sign-img-box input {
+    width: 84px;
+}
