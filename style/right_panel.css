@@ -36,16 +36,27 @@
     height: 56px;
 }
 
-div.panel-body img {
+.grayImg {
     filter: gray; /* IE6-9 */
     filter: grayscale(1); /* Firefox 35+ */
     -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
 }
+
+/*div.panel-body img {*/
+    /*filter: gray; !* IE6-9 *!*/
+    /*filter: grayscale(1); !* Firefox 35+ *!*/
+    /*-webkit-filter: grayscale(1); !* Google Chrome, Safari 6+ & Opera 15+ *!*/
+/*}*/
 /* Disable grayscale on hover */
 div.panel-body img:hover {
     filter: none;
     -webkit-filter: grayscale(0);
 }
+
+/*.clearGray img {*/
+    /*filter: none;*/
+    /*-webkit-filter: grayscale(0);*/
+/*}*/
 
 #panel-showing .sign-img-box {
     float: left;
