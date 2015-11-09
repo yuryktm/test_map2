@@ -1,46 +1,69 @@
 $( document ).ready(function() {
-    init(viewModel());
+    model = viewModel()
+    init();
 });
 
-function init(model){
+var model;
 
-    for(var item in model.show){
-        $("#panel-showing #" + item).addClass("grayImg");
-        console.log(model.show[item].name);
+function init(){
+
+    for(var i in model.show){
+        $("#panel-showing #" + i).addClass("grayImg").addClass("grayImgNone");
     }
 
-    for(var item in model.conf){
-        $("#panel-configuring #" + item).addClass("grayImg");
-        console.log(model.show[item].name);
-    }
+    for(var c in model.conf){
+        $("#panel-configuring #" + c).addClass("grayImg").addClass("grayImgNone");
 
-    for(var item in model.add){
-        $("#panel-adding #" + item).addClass("grayImg");
-        console.log(model.show[item].name);
-    }
-
-
-    $("#3_11").click(function(){
-
-        var item = $("#3_11");
-        if(item.hasClass("grayImg")){
-            item.removeClass('grayImg');
+        if(!model.conf[c].disableInput){
+            $("#panel-configuring #i" + c).val(model.conf[c].value);
+        }else{
+            $("#panel-configuring #i" + c).css("display", "none");
         }
-        else{
-            item.addClass('grayImg');
+    }
+
+    for(var a in model.add){
+        $("#panel-adding #" + a).addClass("grayImg").addClass("grayImgNone");
+
+        if(!model.add[a].disableInput){
+            $("#panel-adding #i" + a).val(model.add[a].value);
+        }else{
+            $("#panel-adding #i" + a).css("display", "none");
         }
-
-
-
-
-    });
-
-    //$("#3_12").click(function(){
-    //
-    //});
-    //3_13
+    }
 };
 
+function imgClick(mode){
+    var id = this.event.currentTarget.id;
+    var  item  = $("#" + id);
+
+    if(item.hasClass("grayImg")){
+        item.removeClass('grayImg').removeClass("grayImgNone");
+        //model.changeItem(id, true);
+        // режим работы картинок для вкладок добавление, конфигурирование
+        if(mode === "mode2"){
+            //для вкладке добавление
+            if(id.indexOf("a",0)>=0){
+               var arr = $("#panel-adding img");
+               arr.each(function(i, item){
+                   if(!item.id == id){
+                       $(item).addClass("grayImg").addClass("grayImgNone");
+                   }
+                });
+            }
+            //для вкладке конфигурирование
+            if(id.indexOf("c",0) >= 0){
+                $("#panel-configuring #" + c).addClass("grayImg").addClass("grayImgNone");
+            }
+        }
+    }
+    else{
+        item.addClass('grayImg');
+        item.mouseout(function(event){
+            item.addClass("grayImgNone");
+            item.unbind(event);
+        });
+    }
+}
 
 
 
