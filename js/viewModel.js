@@ -11,6 +11,9 @@ function viewModel(){
             "s3_15": new Sign("3_15", 0, false),
             "s3_32": new Sign("3_32", 0, false),
             "s3_33": new Sign("3_33", 0, false),
+            "s5_11": new Sign("5_11", 0, false),
+            "s7_11": new Sign("7_11", 0, false),
+            "s7_12": new Sign("7_12", 0, false)
         }
         ,
         //Конфигурирование
@@ -22,7 +25,7 @@ function viewModel(){
             "c3_14": new Sign("3_14", 2.7, false, false),
             "c3_15": new Sign("3_15", 10, false, false),
             "c3_32": new Sign("3_32", 0, false, false),
-            "c3_33": new Sign("3_33", 0, false, true),
+            "c3_33": new Sign("3_33", 0, false, true)
         },
         //Добавление
         add: {
@@ -33,7 +36,7 @@ function viewModel(){
             "a3_14": new Sign("3_14", 2.7, false, false),
             "a3_15": new Sign("3_15", 10, false, false),
             "a3_32": new Sign("3_32", 0, false, true),
-            "a3_33": new Sign("3_33", 0, false, true),
+            "a3_33": new Sign("3_33", 0, false, true)
         }
     }
 

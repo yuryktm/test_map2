@@ -100,6 +100,16 @@
     width: 84px;
 }
 
+.road-sign-img-box {
+    float: left;
+    padding: 20px;
+    width: 196px;
+    height: 196px;
+    margin: 10px;
+    border: 1px #DED3D3 solid;
+}
+
+
 /********************************************************************************************************************/
 /*overaid styles for panel*/
 
