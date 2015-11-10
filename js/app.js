@@ -56,19 +56,18 @@ function init(){
 };
 
 //обработчик клик по знаку
-//mode === "mode2" -- режим работы картинок для вкладок добавление, конфигурирование
+//mode === "mode2" -- режим работы картинок для вкладок добавление
 function imgClick(mode){
     var id = this.event.currentTarget.id;
     var  item  = $("#" + id);
 
     //убираем задаем серый фон для знаков
-
     if(item.hasClass("grayImg")){//установка состояние выбран
         item.removeClass('grayImg').removeClass("grayImgNone");
         //пдейт модели
         model.updateSignState(id, true);
 
-        // режим работы картинок для вкладок добавление, конфигурирование
+        // режим работы картинок для вкладки добавление
         if(mode === "mode2"){
             //для вкладке добавление
             if(id.indexOf("a",0)>=0){
@@ -79,17 +78,6 @@ function imgClick(mode){
                         model.updateSignState(id, false);
                     }
                 });
-            }
-            //для вкладке конфигурирование
-            if(id.indexOf("c",0) >= 0){
-                var arr = $("#panel-configuring img");
-                arr.each(function(i, item){
-                    if(!(item.id == id)){
-                        $(item).addClass("grayImg").addClass("grayImgNone");
-                        model.updateSignState(id, false);
-                    }
-                });
-
             }
         }
     }

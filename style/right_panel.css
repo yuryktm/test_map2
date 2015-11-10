@@ -99,3 +99,23 @@
 .sign-img-box input {
     width: 84px;
 }
+
+/********************************************************************************************************************/
+/*overaid styles for panel*/
+
+.panel-title {
+    font-size: 24px;
+}
+
+.panel {
+    border: none;
+    border-radius: initial;
+}
+
+.panel-heading {
+    padding: 20px 25px;
+    border-bottom: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+/********************************************************************************************************************/
