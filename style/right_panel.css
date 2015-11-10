@@ -26,7 +26,8 @@
     z-index: 1000;
     width: 30%;
     height: 100%;
-    /*display: none;*/
+    max-width: 496px;
+    min-width: 496px;
     background: #ffffff;
 
     top: 0px;

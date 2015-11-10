@@ -7,7 +7,7 @@
 
     <link href="lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="style/style.css" rel="stylesheet" />
-    <link href="style/panel.css" rel="stylesheet" />
+    <!--<link href="style/panel.css" rel="stylesheet" />-->
     <link href="style/right_panel.css" rel="stylesheet" />
 
     <!--<link href="lib/bootstrap-3.3.5-dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
@@ -51,7 +51,7 @@
                         <li><a data-toggle="tab" href="#panel-adding">Добавление</a></li>
                     </ul>
 
-                    <div class="tab-content">
+                    <div class="tab-content" style="padding-top: 15px;">
                         <!--Отображение-->
                         <div id="panel-showing" class="tab-pane fade in active">
                             <div class="sign-img-box">
@@ -223,25 +223,25 @@
         </div>
 
 
-        <div id="s_panel_button" class="sPanelButton">
-            &#171;
-            <div id="s_panel_left" class="sPanelLeft">
-                <img id="rsgsign504" src="img/rsgsign504.gif" />
-                <img id="rsgsign510" src="img/rsgsign510.gif" />
-                <img src="img/rsgsign502.gif" />
-                <img src="img/rsgsign500.gif" />
-                <!--<img src="img/rsgsign447.gif" />-->
+        <!--<div id="s_panel_button" class="sPanelButton">-->
+            <!--&#171;-->
+            <!--<div id="s_panel_left" class="sPanelLeft">-->
+                <!--<img id="rsgsign504" src="img/rsgsign504.gif" />-->
+                <!--<img id="rsgsign510" src="img/rsgsign510.gif" />-->
+                <!--<img src="img/rsgsign502.gif" />-->
+                <!--<img src="img/rsgsign500.gif" />-->
+                <!--&lt;!&ndash;<img src="img/rsgsign447.gif" />&ndash;&gt;-->
 
-                <div class="sign_height_restriction">
-                    <img src="img/hhemp2.gif"/>
-                    <span>123</span>
-                </div>
+                <!--<div class="sign_height_restriction">-->
+                    <!--<img src="img/hhemp2.gif"/>-->
+                    <!--<span>123</span>-->
+                <!--</div>-->
 
-                <img src="img/rsgsign507.gif" />
-                <span style="font: 18px Georgia;">Закрепить</span>
-                <div><input type="checkbox" id="cbHoverOff"/></div>
-            </div>
-        </div>
+                <!--<img src="img/rsgsign507.gif" />-->
+                <!--<span style="font: 18px Georgia;">Закрепить</span>-->
+                <!--<div><input type="checkbox" id="cbHoverOff"/></div>-->
+            <!--</div>-->
+        <!--</div>-->
 
         <!--<div class="menu">-->
             <!--&lt;!&ndash;<img id="rsgsign504" src="img/rsgsign504.gif" /> &ndash;&gt;-->
@@ -251,16 +251,16 @@
         <div id="map"></div>
 
     </body>
-    <script>
-        $("#cbHoverOff").click(function(){
-            if(this.checked){
-                $('#s_panel_left').removeClass('sPanelLeft').addClass('sPanelLeftHoverOff');
-                $('#s_panel_button').removeClass('sPanelButton').addClass('sPanelButtonHoverOff');
-            }else{
-                $('#s_panel_left').removeClass('sPanelLeftHoverOff').addClass('sPanelLeft');
-                $('#s_panel_button').removeClass('sPanelButtonHoverOff').addClass('sPanelButton');
-            }
-        });
+    <!--<script>-->
+        <!--$("#cbHoverOff").click(function(){-->
+            <!--if(this.checked){-->
+                <!--$('#s_panel_left').removeClass('sPanelLeft').addClass('sPanelLeftHoverOff');-->
+                <!--$('#s_panel_button').removeClass('sPanelButton').addClass('sPanelButtonHoverOff');-->
+            <!--}else{-->
+                <!--$('#s_panel_left').removeClass('sPanelLeftHoverOff').addClass('sPanelLeft');-->
+                <!--$('#s_panel_button').removeClass('sPanelButtonHoverOff').addClass('sPanelButton');-->
+            <!--}-->
+        <!--});-->
 
-    </script>
+    <!--</script>-->
 </html>
