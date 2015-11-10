@@ -3,14 +3,14 @@ function viewModel(){
         //Отображение вкладка
         show: {
             //Знаки
-            "s3_4": new Sign("3_4"),
-            "s3_11": new Sign("3_11"),
-            "s3_12": new Sign("3_12"),
-            "s3_13": new Sign("3_13"),
-            "s3_14": new Sign("3_14"),
-            "s3_15": new Sign("3_15"),
-            "s3_32": new Sign("3_32"),
-            "s3_33": new Sign("3_33"),
+            "s3_4": new Sign("3_4", 0, false),
+            "s3_11": new Sign("3_11", 0, false),
+            "s3_12": new Sign("3_12",0, false),
+            "s3_13": new Sign("3_13", 0, false),
+            "s3_14": new Sign("3_14", 0, false),
+            "s3_15": new Sign("3_15", 0, false),
+            "s3_32": new Sign("3_32", 0, false),
+            "s3_33": new Sign("3_33", 0, false),
         }
         ,
         //Конфигурирование
@@ -36,6 +36,31 @@ function viewModel(){
             "a3_33": new Sign("3_33", 0, false, true),
         }
     }
+
+    model.updateSignState = function(id, checked){
+
+        if(model.add[id]){
+            model.add[id].checked = checked;
+        }
+
+        if(model.conf[id]){
+            model.conf[id].checked = checked;
+        }
+
+        if(model.show[id]){
+            model.show[id].checked = checked;
+
+            if(id === "s3_4"){
+                if(checked){
+                    mapBuilder.addMarkers("zn1");
+                }
+
+                if(!checked){
+                    mapBuilder.removeMarkers();
+                }
+            }
+        }
+    };
 
     viewModel = function(){
         return model;

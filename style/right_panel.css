@@ -1,3 +1,4 @@
+/********************************************************************************************************************/
 /*right menu*/
 .right-menu {
     position: fixed;
@@ -19,17 +20,35 @@
 .btn-circle span  {
     margin: 4px 0 0 0;
 }
-
-/*right panel*/
+/********************************************************************************************************************/
 .right-panel {
     position: fixed;
     z-index: 1000;
     width: 30%;
     height: 100%;
-    display: none;
+    /*display: none;*/
     background: #ffffff;
+
+    top: 0px;
+    left: -30%;
+
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
 }
 
+.right-panel-Off {
+    left: -30%;
+}
+
+.right-panel-On {
+    left: 0px;
+}
+
+/********************************************************************************************************************/
 /*sign*/
 .sign-img{
     width: 56px;
