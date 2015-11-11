@@ -100,15 +100,19 @@
     width: 84px;
 }
 
+/*для знаков дорог*/
 .road-sign-img-box {
     float: left;
-    padding: 20px;
-    width: 196px;
-    height: 196px;
+    width: 444px;
+    height: 100%;
     margin: 10px;
     border: 1px #DED3D3 solid;
 }
-
+.road-sign-img {
+    height: 80px;
+    float: left;
+    margin: 10px;
+}
 
 /********************************************************************************************************************/
 /*overaid styles for panel*/

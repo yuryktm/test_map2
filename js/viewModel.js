@@ -11,7 +11,8 @@ function viewModel(){
             "s3_15": new Sign("3_15", 0, false),
             "s3_32": new Sign("3_32", 0, false),
             "s3_33": new Sign("3_33", 0, false),
-            "s5_11": new Sign("5_11", 0, false),
+            //знаки дорог
+            "s5_1": new Sign("5_1", 0, false),
             "s7_11": new Sign("7_11", 0, false),
             "s7_12": new Sign("7_12", 0, false)
         }

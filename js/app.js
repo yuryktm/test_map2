@@ -31,6 +31,7 @@ function init(){
     //инициализация знаков на панели
     //данные берем из модели - model
     for(var i in model.show){
+
         $("#panel-showing #" + i).addClass("grayImg").addClass("grayImgNone");
     }
 
