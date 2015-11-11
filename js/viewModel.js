@@ -66,6 +66,18 @@ function viewModel(){
         }
     };
 
+    //' метод который возврщает выделенные знаки с их значениями из вкладки конфигурирование'
+    model.getConfSelectedSign = function(){
+        var result = [];
+        for(var sign in this.conf){
+            if (this.conf.hasOwnProperty(sign) && this.conf[sign].checked) {
+                var s = {'name': this.conf[sign].name, 'value': this.conf[sign].value};
+                result.push(s);
+            }
+        }
+        return result;
+    };
+
     viewModel = function(){
         return model;
     }
