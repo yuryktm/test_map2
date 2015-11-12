@@ -24,14 +24,14 @@
 .right-panel {
     position: fixed;
     z-index: 1000;
-    width: 30%;
+    width: 496px;
     height: 100%;
     max-width: 496px;
-    min-width: 100px;
+    min-width: 496px;
     background: #ffffff;
 
     top: 0px;
-    left: -30%;
+    left: -496px;
 
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
@@ -42,7 +42,7 @@
 }
 
 .right-panel-Off {
-    left: -30%;
+    left: -496px;
 }
 
 .right-panel-On {

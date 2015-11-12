@@ -21,14 +21,14 @@ function init(){
         //hide right menu
         $('.right-menu').css("display", "none");
         //show right panel
-        $('.right-panel').css("left", "0px").css("min-width","496px");
+        $('.right-panel').css("left", "0px");
 
     });
     $("#close-right-panel").click(function(){
         //hide right menu
         $('.right-menu').css("display", "inline");
         //hide right panel
-        $('.right-panel').css("left", "-30%").css("min-width","100px");
+        $('.right-panel').css("left", "-496px");
     });
 
     //инициализация знаков на панели
