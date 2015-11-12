@@ -5,44 +5,31 @@
 #map {
     position: absolute;
 }
+/********************************************************************************************************************/
+/*right menu*/
+.right-menu, .left-menu {
+    position: fixed;
+    z-index: 1000;
+    width: 100px;
+    height: 200px;
+    top: 20px;
+    right: -20px;
+}
 
-/*.menu {*/
-    /*float: right;*/
-    /*position: relative;*/
-    /*z-index: 999;*/
-    /*margin-right: 5px;*/
-    /*margin-top: 5px;*/
-/*}*/
+/*left menu*/
+.left-menu {
+    left: 20px;
+}
 
-/*div.menu img {*/
-    /*width: 50px;*/
-    /*height: 50px;*/
-/*}*/
+/*buttons*/
+.btn-circle {
+    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    margin: 10px 0 0 0;
+}
 
- #s_panel_left img {
-     width: 50px;
-     height: 50px;
- }
+.btn-circle span  {
+    margin: 4px 0 0 0;
+}
 
- /*sign height restriction*/
- .sign_height_restriction {
-     display:inline-block;
-     position:relative;
- }
- .sign_height_restriction span {
-     display:inline-block;
-     position:absolute;
-     top: 22px;
-     left: 19px; /*1 symbol*/
-     left: 14px; /*2 symbol*/
-
-     /* Оформление текста */
-     color:#000;
-     font-weight: bold;
-     font-family:Arial, Helvetica, sans-serif;
-     font-size:10px;
-
-     /* Фон */
-     /*background-color:rgba(0,0,0,.4);*/
-     padding:10px 30px;
- }

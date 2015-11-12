@@ -16,20 +16,70 @@ function init(){
         $("#map").css('width', window.innerWidth + "px").css('height', window.innerHeight + "px");
     });
 
-    //открытия закрытия панели
-    $("#open-right-menu-btn").click(function(){
-        //hide right menu
-        $('.right-menu').css("display", "none");
-        //show right panel
-        $('.right-panel').css("left", "0px");
 
+    function panelOpen(type){
+        //hide left menu
+        $('.left-menu').css("display", "none");
+        //show left panel
+        $('.left-panel').css("left", "0px");
+        $(type).css("display", "inline");
+    };
+
+    function panelClose(type){
+        //hide left menu
+        $('.left-menu').css("display", "inline");
+        //hide left panel
+        $('.left-panel').css("left", "-496px");
+        $(type).css("display", "none");
+    };
+
+
+    //открытия закрытия панели left-panel
+    $("#open-left-menu-btn").click(function(){
+        panelOpen(".panel-body-settings");
     });
-    $("#close-right-panel").click(function(){
-        //hide right menu
-        $('.right-menu').css("display", "inline");
-        //hide right panel
-        $('.right-panel').css("left", "-496px");
+    $("#close-left-panel").click(function(){
+        panelClose(".panel-body-settings");
     });
+
+    //открытия закрытия панели left-panel-info
+    $("#info-left-menu-btn").click(function(){
+        panelOpen(".panel-body-info");
+    });
+    $("#close-left-panel-info").click(function(){
+        panelClose(".panel-body-info");
+    });
+
+    ////открытия закрытия панели left-panel
+    //$("#open-left-menu-btn").click(function(){
+    //    //hide left menu
+    //    $('.left-menu').css("display", "none");
+    //    //show left panel
+    //    $('.left-panel').css("left", "0px");
+    //
+    //});
+    //$("#close-left-panel").click(function(){
+    //    //hide left menu
+    //    $('.left-menu').css("display", "inline");
+    //    //hide left panel
+    //    $('.left-panel').css("left", "-496px");
+    //});
+    //
+    //
+    ////открытия закрытия панели left-panel-info
+    //$("#info-left-menu-btn").click(function(){
+    //    //hide left menu
+    //    $('.left-menu').css("display", "none");
+    //    //show left panel
+    //    $('.left-panel-info').css("left", "0px");
+    //
+    //});
+    //$("#close-left-panel-info").click(function(){
+    //    //hide left menu
+    //    $('.left-menu').css("display", "inline");
+    //    //hide left panel
+    //    $('.left-panel-info').css("left", "-496px");
+    //});
 
     //инициализация знаков на панели
     //данные берем из модели - model

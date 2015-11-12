@@ -1,27 +1,4 @@
-/********************************************************************************************************************/
-/*right menu*/
-.right-menu {
-    position: fixed;
-    z-index: 1000;
-    width: 100px;
-    height: 200px;
-    top: 20px;
-    left: 20px;
-}
-
-/*buttons*/
-.btn-circle {
-    border-radius: 100%;
-    width: 56px;
-    height: 56px;
-    margin: 10px 0 0 0;
-}
-
-.btn-circle span  {
-    margin: 4px 0 0 0;
-}
-/********************************************************************************************************************/
-.right-panel {
+.left-panel {
     position: fixed;
     z-index: 1000;
     width: 496px;
@@ -41,11 +18,11 @@
     -moz-border-radius: 0 5px 0 0;
 }
 
-.right-panel-Off {
+.left-panel-Off {
     left: -496px;
 }
 
-.right-panel-On {
+.left-panel-On {
     left: 0px;
 }
 
@@ -133,3 +110,11 @@
     border-top-right-radius: 0;
 }
 /********************************************************************************************************************/
+.panel-heading span {
+    font-size: 24px;
+}
+/********************************************************************************************************************/
+.panel-body-settings,
+.panel-body-info{
+    display: none;
+}
