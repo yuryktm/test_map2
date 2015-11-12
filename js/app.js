@@ -12,20 +12,23 @@ $( document ).ready(function() {
 
 //инициализация
 function init(){
+    $(window).resize(function() {
+        $("#map").css('width', window.innerWidth + "px").css('height', window.innerHeight + "px");
+    });
 
     //открытия закрытия панели
     $("#open-right-menu-btn").click(function(){
         //hide right menu
         $('.right-menu').css("display", "none");
         //show right panel
-        $('.right-panel').css("left", "0px");
+        $('.right-panel').css("left", "0px").css("min-width","496px");
 
     });
     $("#close-right-panel").click(function(){
         //hide right menu
         $('.right-menu').css("display", "inline");
         //hide right panel
-        $('.right-panel').css("left", "-30%");
+        $('.right-panel').css("left", "-30%").css("min-width","100px");
     });
 
     //инициализация знаков на панели
