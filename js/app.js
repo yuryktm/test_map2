@@ -16,7 +16,6 @@ function init(){
         $("#map").css('width', window.innerWidth + "px").css('height', window.innerHeight + "px");
     });
 
-
     function panelOpen(type){
         //hide left menu
         $('.left-menu').css("display", "none");
@@ -25,61 +24,29 @@ function init(){
         $(type).css("display", "inline");
     };
 
-    function panelClose(type){
+    function panelClose(){
         //hide left menu
         $('.left-menu').css("display", "inline");
         //hide left panel
         $('.left-panel').css("left", "-496px");
-        $(type).css("display", "none");
+        $(".panel-body-settings").css("display", "none");
+        $(".panel-body-info").css("display", "none");
     };
-
 
     //открытия закрытия панели left-panel
     $("#open-left-menu-btn").click(function(){
         panelOpen(".panel-body-settings");
+        $(".panel-heading h1").text("Настройки");
     });
     $("#close-left-panel").click(function(){
-        panelClose(".panel-body-settings");
+        panelClose();
     });
 
     //открытия закрытия панели left-panel-info
     $("#info-left-menu-btn").click(function(){
         panelOpen(".panel-body-info");
+        $(".panel-heading h1").text("Данные о маршруте")
     });
-    $("#close-left-panel-info").click(function(){
-        panelClose(".panel-body-info");
-    });
-
-    ////открытия закрытия панели left-panel
-    //$("#open-left-menu-btn").click(function(){
-    //    //hide left menu
-    //    $('.left-menu').css("display", "none");
-    //    //show left panel
-    //    $('.left-panel').css("left", "0px");
-    //
-    //});
-    //$("#close-left-panel").click(function(){
-    //    //hide left menu
-    //    $('.left-menu').css("display", "inline");
-    //    //hide left panel
-    //    $('.left-panel').css("left", "-496px");
-    //});
-    //
-    //
-    ////открытия закрытия панели left-panel-info
-    //$("#info-left-menu-btn").click(function(){
-    //    //hide left menu
-    //    $('.left-menu').css("display", "none");
-    //    //show left panel
-    //    $('.left-panel-info').css("left", "0px");
-    //
-    //});
-    //$("#close-left-panel-info").click(function(){
-    //    //hide left menu
-    //    $('.left-menu').css("display", "inline");
-    //    //hide left panel
-    //    $('.left-panel-info').css("left", "-496px");
-    //});
 
     //инициализация знаков на панели
     //данные берем из модели - model
