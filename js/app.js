@@ -74,6 +74,14 @@ function init(){
             $("#panel-adding #i" + a).css("display", "none");
         }
     }
+
+    //оброботчик на измения в полях под знаками
+    $(".tab-content input").change(function(e) {
+        var id = e.currentTarget.id;
+        var value = e.currentTarget.value;
+        model.updateSignValue(id, value);
+    });
+
 };
 
 //обработчик клик по знаку

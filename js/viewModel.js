@@ -66,6 +66,22 @@ function viewModel(){
         }
     };
 
+    model.updateSignValue = function(id, value){
+
+        if(isNaN(value)){ return;}
+
+        var sign = id.replace("i","");
+        var val = parseFloat(value);
+
+        if(model.conf.hasOwnProperty(sign)){
+            model.conf[sign].value = val;
+        }
+
+        if(model.add.hasOwnProperty(sign)){
+            model.conf[sign].value = val;
+        }
+    };
+
     //' метод который возврщает выделенные знаки с их значениями из вкладки конфигурирование'
     model.getConfSelectedSign = function(){
         var result = [];
