@@ -81,8 +81,12 @@ function init(){
         var value = e.currentTarget.value;
         model.updateSignValue(id, value);
     });
-
 };
+
+//показывает открыта панель добавление да/нет
+function addTabIsOpen(){
+    return $("a[aria-expanded='true']").attr('href') === "#panel-adding";
+}
 
 //обработчик клик по знаку
 //mode === "mode2" -- режим работы картинок для вкладок добавление
