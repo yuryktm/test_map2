@@ -81,6 +81,14 @@ function init(){
         var value = e.currentTarget.value;
         model.updateSignValue(id, value);
     });
+
+    $("#btnApplyConf").click(function(){
+        console.log("Conf");
+    });
+
+    $("#btnApplyAdd").click(function(){
+        console.log("Add");
+    });
 };
 
 //показывает открыта панель добавление да/нет
